@@ -1,4 +1,4 @@
-# GenericCachedRepository
+# Generic Cached Repository
 
 Simple implementation of `Generic Cached Repository` and `Distributed Caching` by [`Redis`](https://redis.io).
 
