@@ -1,0 +1,27 @@
+version: "3.9"
+services:
+  redis:
+    image: redis
+    container_name: myredis
+    restart: unless-stopped
+    ports:
+      - '6379:6379'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - redis:/data
+
+  # redis-commander:
+  #   container_name: redis-commander
+  #   image: rediscommander/redis-commander:latest
+  #   restart: unless-stopped
+  #   ports:
+  #     - "8081:8081"
+  #   environment:
+  #     - REDIS_HOSTS=local:redis:6379
+  #   depends_on:
+  #     - redis
+
+volumes:
+  redis:
+    driver: local
